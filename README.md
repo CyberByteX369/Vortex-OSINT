@@ -10,29 +10,30 @@ Vortex is an all-in-one OSINT tool designed for security researchers. It aggrega
  * ⚡ Async Performance: Uses httpx and asyncio for blazing fast results.
 📦 Installation
 1. Clone the repository
-git clone [https://github.com/yourusername/Vortex-OSINT.git](https://github.com/yourusername/Vortex-OSINT.git)
-cd Vortex-OSINT
+  git clone [https://github.com/yourusername/Vortex-OSINT.git](https://github.com/yourusername/Vortex-OSINT.git)
+  cd Vortex-OSINT
 
 2. Set up Virtual Environment (Fixes Kali/Debian errors)
-python3 -m venv venv
-source venv/bin/activate
+  python3 -m venv venv
+  source venv/bin/activate
 
 3. Install Dependencies
-pip install -r requirements.txt
+
+  pip install -r requirements.txt
 
 💻 Usage
 Main Menu
-python main.py --help
+  python main.py --help
 
 1. Search a Pattern in a Local Database
 Instead of using grep, use Vortex to find partial emails (e.g., m...4@gmail.com).
-python main.py breach --pattern "m.*4@gmail.com" --file /path/to/database.txt
+  python main.py breach --pattern "m.*4@gmail.com" --file /path/to/database.txt
 
 2. Scan a Username
-python main.py user --name "cyberadmin"
+  python main.py user --name "cyberadmin"
 
 3. Analyze an IP Address
-python main.py ip --target "1.1.1.1"
+  python main.py ip --target "1.1.1.1"
 
 ⚠️ Disclaimer
 This tool is for educational purposes and security research only. Using this tool to target systems without permission is illegal. The author is not responsible for misuse.
