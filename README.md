@@ -11,7 +11,7 @@ Vortex is an all-in-one OSINT CLI tool designed for security researchers. It agg
 📦 Installation
 1. Clone the repository
 ``` bash
-git clone [https://github.com/yourusername/Vortex-OSINT.git](https://github.com/yourusername/Vortex-OSINT.git)
+git clone https://github.com/CyberByteX369/Vortex-OSINT.git
 ```
 ``` bash
 cd Vortex-OSINT
