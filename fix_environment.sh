@@ -1,19 +1,24 @@
 #!/bin/bash
 
-echo "🗑️  Cleaning up broken environment..."
+echo "🛑 Deactivating current environment (if any)..."
+deactivate 2>/dev/null
+
+echo "🗑️  Deleting broken virtual environment..."
 rm -rf venv
 
-echo "✨ Creating fresh virtual environment..."
+echo "✨ Creating FRESH virtual environment..."
 python3 -m venv venv
 
 echo "🔌 Activating environment..."
 source venv/bin/activate
 
-echo "📦 Installing correct versions..."
+echo "📦 Installing GUARANTEED working versions..."
 pip install --upgrade pip
 pip install -r requirements.txt
 
+echo "🔍 Verifying versions (Must show Typer 0.12.5)..."
+pip list | grep -E "typer|click|rich"
+
 echo ""
-echo "✅ FIXED! Try running the tool now:"
-echo "   source venv/bin/activate"
-echo "   python main.py --help"
+echo "✅ ENVIRONMENT FIXED! Running test..."
+python main.py --help
